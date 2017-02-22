@@ -18,14 +18,14 @@ function showPlayer($battle, $playerId) {
 
 ?>
 <form action="?controller=battle" method="post">
-    <input type="hidden" name="turn" value="<?php echo $battle->getTurn(); ?>" />
+    <input type="hidden" name="turn" value="<?php echo $battle->getTurn(); ?>"/>
     <div class="panel panel-primary">
         <div class="panel-heading">
             Combat
         </div>
         <div class="panel-body">
 
-            <form action="?controller=battle" method="post">
+            <form action="?controller=battle" method="post" class="row">
                 <div class="col-md-4">
                     <?php echo showPlayer($battle, 0); ?>
                 </div>
@@ -46,6 +46,12 @@ function showPlayer($battle, $playerId) {
                     <?php echo showPlayer($battle, 1); ?>
                 </div>
             </form>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <a href="?controller=surrender">Abandonner</a>
+                </div>
+            </div>
 
         </div>
     </div>

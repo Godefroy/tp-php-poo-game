@@ -1,7 +1,7 @@
 <?php
 require 'classes/Config.php';
-use Game\Config as Config;
-use Game\Battle as Battle;
+use Game\Config;
+use Game\Battle;
 
 // Try to retrieve saved Battle
 $battle = Battle::retrieve(Config::battleFile);
