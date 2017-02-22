@@ -11,7 +11,9 @@ $view = $battle === false ? 'new_battle' : 'battle';
 $error = false;
 
 // Contrôleurs
-if (isset($_GET['controller']) && preg_match('#^[a-z_]+$#', $_GET['controller'])) {
+if (isset($_GET['controller']) && preg_match('#^[a-z_]+$#', $_GET['controller']) &&
+    file_exists('controllers/' . $_GET['controller'] . '.php')
+) {
     require 'controllers/' . $_GET['controller'] . '.php';
 }
 

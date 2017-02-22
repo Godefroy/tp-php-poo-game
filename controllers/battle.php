@@ -1,4 +1,5 @@
 <?php
+if (!$battle) return;
 
 // On vérifie que l'envoi du formulaire correspond au bon tour de jeu
 if (isset($_POST['turn']) && (int)$_POST['turn'] !== $battle->getTurn()) {

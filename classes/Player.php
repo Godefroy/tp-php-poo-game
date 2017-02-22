@@ -1,6 +1,6 @@
 <?php
 namespace Game;
-use Game\Characters\Character as Character;
+use Game\Characters\Character;
 
 class Player {
     private $name;

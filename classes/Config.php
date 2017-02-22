@@ -2,7 +2,7 @@
 namespace Game;
 
 class Config {
-    const battleFile = 'battle.txt';
+    const battleFile = __DIR__ . '/../battle.txt';
     const nbCharacters = 2;
 }
 

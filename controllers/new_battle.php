@@ -1,7 +1,7 @@
 <?php
-use Game\Battle as Battle;
-use Game\Player as Player;
-use Game\CharactersFactory as CharactersFactory;
+use Game\Battle;
+use Game\Player;
+use Game\CharactersFactory;
 
 // New Battle
 if (isset($_POST['players_characters']) && isset($_POST['players_names'])) {

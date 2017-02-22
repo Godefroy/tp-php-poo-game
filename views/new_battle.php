@@ -1,6 +1,6 @@
 <?php
-use Game\Config as Config;
-use Game\CharactersFactory as CharactersFactory;
+use Game\Config;
+use Game\CharactersFactory;
 
 function showPlayerCharactersSelect($playerId) {
     for ($i = 0; $i < Config::nbCharacters; $i++) {
