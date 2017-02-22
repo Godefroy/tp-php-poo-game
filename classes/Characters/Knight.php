@@ -1,6 +1,7 @@
 <?php
+namespace Game\Characters;
 
-class KnightCharacter extends Character {
+class Knight extends Character {
     const type = 'Knight';
     protected static $HP = 15;
     protected static $damages = 5;

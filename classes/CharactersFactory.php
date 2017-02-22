@@ -1,16 +1,18 @@
 <?php
+namespace Game;
+use Game\Characters;
 
 class CharactersFactory {
 
     public static $types = [
-        'archer' => ArcherCharacter::class,
-        'berzerk' => BerzerkCharacter::class,
-        'knight' => KnightCharacter::class
+        'archer' => Characters\Archer::class,
+        'berzerk' => Characters\Berzerk::class,
+        'knight' => Characters\Knight::class
     ];
 
-    public static function create($type) {
+    public static function create(string $type) {
         if (!isset(self::$types[$type])) {
-            throw new Exception('Unknown Character type ' . $type);
+            throw new \Exception('Unknown Character type ' . $type);
         }
         return new self::$types[$type]();
     }

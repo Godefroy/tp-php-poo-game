@@ -1,4 +1,6 @@
 <?php
+use Game\Config as Config;
+use Game\CharactersFactory as CharactersFactory;
 
 function showPlayerCharactersSelect($playerId) {
     for ($i = 0; $i < Config::nbCharacters; $i++) {
@@ -24,12 +26,14 @@ function showPlayerCharactersSelect($playerId) {
             <div class="form-group">
                 <label>
                     Joueur 1 :
+                    <input type="text" name="players_names[0]" placeholder="Nom du joueur" class="form-control" />
                     <?php showPlayerCharactersSelect(0); ?>
                 </label>
             </div>
             <div class="form-group">
                 <label>
                     Joueur 2 :
+                    <input type="text" name="players_names[1]" placeholder="Nom du joueur" class="form-control" />
                     <?php showPlayerCharactersSelect(1); ?>
                 </label>
             </div>
